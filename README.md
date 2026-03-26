@@ -1,75 +1,78 @@
-# React + TypeScript + Vite
+# 🚀 Sibiraj R - Full Stack MERN Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my professional portfolio! This project showcases my skills, academic journey, and technical projects as a **Full Stack MERN Developer**. Built with **React**, **Tailwind CSS**, and **Framer Motion**, it features a premium, futuristic aesthetic with advanced interactive animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+### 🌌 Interactive Hero Section
+- **Dynamic Typewriter Effect**: Personal greeting that builds a strong first impression.
+- **Orbital Tech Animation**: A revolving display of the core technologies I work with (React, Node, MongoDB, etc.).
+- **Professional Persona**: Focused on building performant and scalable digital experiences.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 🛠️ Technical Arsenal (Skills)
+- **Glassmorphism Design**: High-end translucent cards with neon-cyan glows.
+- **Animated Proficiency Bars**: Visual indicators that animate to show my expertise levels.
+- **Tech Stack Mapping**: Direct icon integration for every technology I master.
 
-Note: This will impact Vite dev & build performances.
+### 🧩 Creative Projects
+- **Interactive Showcases**: Hover-to-reveal details for real-world projects like *NeonThreads*, *SSMS*, and *E-Learning*.
+- **Live Previews**: Direct links to production builds hosted on Render.
+- **Tech Highlights**: Detailed stack information for every listed project.
 
-## Expanding the ESLint configuration
+### 🎓 Academic Journey
+- **Vertical Timeline**: A chronologically structured journey through my education (BCA, HSC, SSLC).
+- **Milestone Cards**: Detailed cards for each institution, aggregate scores, and highlighted current coursework.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📱 Seamless Contact Integration
+- **WhatsApp Click-to-Chat**: Direct integration that opens a pre-formatted message on your WhatsApp (Web or App).
+- **Direct Mail & Links**: Quick access to my professional social profiles and email.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Built With
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Frontend**: [React 19](https://react.dev/), [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/), [React Icons](https://react-icons.github.io/react-icons/)
+- **Deployment**: Render (Production Builds)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+To run this project locally, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Sibi-2006/sibi-portfolio-.git
+   cd sibi-portfolio-
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 📬 Contact Me
+
+Let's collaborate on something amazing!
+
+- **Email**: [sibirajr0709@gmail.com](mailto:sibirajr0709@gmail.com)
+- **WhatsApp**: [+91 75983 82584](https://wa.me/7598382584)
+- **LinkedIn**: [Sibiraj R](https://linkedin.com/in/sibiraj-r-147936336)
+- **GitHub**: [Sibi-2006](https://github.com/Sibi-2006)
+
+---
+
+Developed with ❤️ by **Sibiraj R**
