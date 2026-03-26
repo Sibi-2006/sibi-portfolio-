@@ -4,6 +4,11 @@ Welcome to my professional portfolio! This project showcases my skills, academic
 
 ---
 
+## 🔗 Live Demo
+Check out the live version of my portfolio here: **[sibi-portfolio-vzqu.onrender.com](https://sibi-portfolio-vzqu.onrender.com)**
+
+---
+
 ## ✨ Features
 
 ### 🌌 Interactive Hero Section
