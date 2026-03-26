@@ -57,7 +57,7 @@ export const Projects: React.FC = () => {
               </div>
 
               {/* Reveal Overlay - Scrollable for full content */}
-              <div className={`absolute inset-0 bg-black/95 backdrop-blur-md flex flex-col p-8 sm:p-12 z-20 transition-all duration-700 transform text-left overflow-y-auto scrollbar-hide
+              <div className={`absolute inset-0 bg-black/95 backdrop-blur-md flex flex-col p-8 sm:p-12 z-20 transition-all duration-700 transform text-left overflow-y-auto
                 ${activeIndex === index 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-full lg:group-hover:opacity-100 lg:group-hover:translate-y-0'}`}
