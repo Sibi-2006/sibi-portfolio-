@@ -8,6 +8,7 @@ import socialImg from '../assets/SocialLearning.png';
 
 export const Projects: React.FC = () => {
   const projectImages = [neonImg, ssmsImg, elearningImg, socialImg];
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
 
   return (
     <div
@@ -20,29 +21,34 @@ export const Projects: React.FC = () => {
             My Projects
           </p>
           <p className="py-6 text-gray-400 max-w-lg mx-auto">
-            Hover or click on the cards to explore the technical details and features of my work.
+            Click on the cards to explore the technical details and features of my work.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 w-full max-w-6xl mx-auto">
-          {PROJECTS.map(({ title, tech, description, highlight, url }, index) => (
+          {PROJECTS.map(({ title, tech, description, url }, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative group rounded-2xl overflow-hidden aspect-[16/10] bg-gray-900 border ${highlight ? 'border-primary/50 shadow-[0_0_20px_rgba(0,191,255,0.2)]' : 'border-gray-800'} hover:border-primary transition-all duration-500 cursor-pointer`}
+              onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+              className={`relative group rounded-2xl overflow-hidden aspect-[16/10] bg-gray-900 border ${activeIndex === index ? 'border-primary ring-2 ring-primary/20' : 'border-gray-800'} hover:border-primary transition-all duration-500 cursor-pointer`}
             >
               {/* Project Image */}
               <img 
                 src={projectImages[index]} 
                 alt={title} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className={`w-full h-full object-cover transition-transform duration-700 ${activeIndex === index ? 'scale-110' : 'group-hover:scale-110'}`}
               />
 
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/90 backdrop-blur-sm flex flex-col justify-center p-6 sm:p-10 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-full group-hover:translate-y-0 text-left">
+              {/* Reveal Overlay */}
+              <div className={`absolute inset-0 bg-black/90 backdrop-blur-sm flex flex-col justify-center p-6 sm:p-10 transition-all duration-500 transform text-left
+                ${activeIndex === index 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-full md:group-hover:opacity-100 md:group-hover:translate-y-0'}`}
+              >
                 <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{title}</h3>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -65,6 +71,7 @@ export const Projects: React.FC = () => {
                     href={url} 
                     target="_blank" 
                     rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()} // Prevent card toggle when clicking button
                     className="inline-flex items-center px-6 py-3 bg-primary text-black font-bold rounded-lg hover:bg-white hover:scale-105 transition-all duration-300"
                   >
                     View Project <span className="ml-2">→</span>
@@ -72,8 +79,10 @@ export const Projects: React.FC = () => {
                 </div>
               </div>
 
-              {/* Mobile Info (visible briefly or via tap) */}
-              <div className="absolute top-4 left-4 lg:hidden bg-black/60 backdrop-blur shadow-lg p-2 rounded-lg opacity-80 pointer-events-none group-hover:opacity-0 transition-opacity">
+              {/* Title Tag (visible when not revealed) */}
+              <div className={`absolute top-4 left-4 bg-black/60 backdrop-blur shadow-lg p-2 px-4 rounded-lg transition-opacity duration-300 pointer-events-none
+                ${activeIndex === index ? 'opacity-0' : 'opacity-100 group-hover:opacity-0'}`}
+              >
                 <span className="text-primary font-bold">{title}</span>
               </div>
             </motion.div>
